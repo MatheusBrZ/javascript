@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Condição 
+    IF/ELSE País</title>
+</head>
+<body>
+  <h1>Identificando se a nacionalidade é Brasileiro(a)</h1>
+  Digite o seu país: <input type="text" name="pais" id="pais">
+  <input type="button" value="Verificar" onclick="verificar()">
+  <div id="res"></div>
+  <script>
+    function verificar() {
+      var pais = window.document.getElementById('pais')
+      var res = window.document.getElementById('res')
+      var país = (pais.value)
+      if (país != 'Brasil') {
+        res.innerHTML = `<p>Você é <strong>ESTRANGEIRO</strong>!<p>`
+      } else {
+        res.innerHTML = `<p>Você é <strong>BRASILEIRO!</strong><p>`
+      }
+      return
+    }
+  </script>
+</body>
+</html>
